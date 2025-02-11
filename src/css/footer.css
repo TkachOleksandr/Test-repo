@@ -1,0 +1,349 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ----------FOOTER-MOBILE----------- */
+
+.page-footer {
+  padding: 32px 0;
+  background: url('/img/footer/footer-glass-effect-mobile.png') no-repeat right
+      center,
+    #1c1d20;
+}
+
+.footer-container {
+  width: 100%;
+  min-width: 320px;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.footer-logo {
+  float: left;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.footer-title {
+  display: block;
+  margin: 0;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #fafafa;
+}
+
+.footer-left-span {
+  display: block;
+  margin-top: 8px;
+}
+
+.footer-color-span {
+  color: #ed3b44;
+}
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 63px;
+  margin-bottom: 64px;
+}
+
+.footer-form-input {
+  width: 100%;
+  height: 44px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px rgba(250, 250, 250, 0.2) solid;
+  padding-bottom: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  transition: border-color 350ms ease-in-out;
+}
+
+.footer-form-input::placeholder {
+  color: rgba(250, 250, 250, 0.6);
+}
+
+.footer-form-input:hover,
+.footer-form-input:focus {
+  border-color: #fafafa;
+}
+
+.footer-form-input:focus {
+  outline: none;
+}
+
+/* ---------Validation-------- */
+
+.input-wrapper {
+  height: 66px;
+}
+
+.footer-form-input.email:valid {
+  border-color: #3cbc81;
+}
+
+.footer-form-input.email:invalid:not(:placeholder-shown) {
+  border-color: #e74a3b;
+}
+
+.text-valid,
+.text-invalid {
+  display: none;
+}
+
+.footer-form-input.email:valid + .text-valid {
+  display: block;
+  color: #3cbc81;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.footer-form-input.email:not(:placeholder-shown):invalid ~ .text-invalid {
+  display: block;
+  color: #e74a3b;
+  font-size: 13px;
+  margin-top: 4px;
+}
+/* ----------------------------------------- */
+
+.footer-form-btn {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  width: 100px;
+  height: 100px;
+  border: none;
+  cursor: pointer;
+  border-radius: 100%;
+  background-color: #ed3b44;
+  margin-top: 16px;
+  transition: background-color 250ms ease-in-out;
+}
+
+.footer-form-btn:hover,
+.footer-form-btn:focus {
+  background-color: #e0373f;
+}
+
+.footer-contacts-list {
+  display: flex;
+  gap: 4px;
+}
+
+.footer-contacts-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  padding: 10px 12px;
+  height: 37px;
+  font-weight: 500;
+  font-size: 14px;
+  font-style: normal;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  transition: border-color 350ms ease-in-out;
+}
+
+.footer-contacts-item:hover,
+.footer-contacts-item:focus {
+  border-color: #fafafa;
+}
+
+@media (max-width: 350px) {
+  .footer-contacts-item {
+    font-size: 12px;
+  }
+}
+
+/* ---------FOOTER-TABLET---------- */
+
+@media screen and (min-width: 768px) {
+  .page-footer {
+    padding-top: 80px;
+    padding-bottom: 169px;
+    background: url('/img/footer/footer-glass-effect-tablet.png') no-repeat
+        right center,
+      #1c1d20;
+  }
+
+  .footer-container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+
+  .footer-logo {
+    margin-right: 20px;
+  }
+
+  .footer-title {
+    font-size: 64px;
+  }
+
+  .footer-left-span {
+    margin-top: 10px;
+  }
+
+  .footer-form {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 0px;
+    margin-bottom: 18px;
+  }
+
+  .footer-form-input {
+    width: 245px;
+  }
+  .footer-form-btn {
+    width: 150px;
+    height: 150px;
+    margin-top: 18px;
+  }
+
+  .footer-contacts-list {
+    gap: 8px;
+  }
+
+  .footer-contacts-item {
+    padding: 18px 32px;
+    height: 55px;
+    font-size: 16px;
+  }
+}
+
+/* -------FOOTER DESKTOP----- */
+
+@media screen and (min-width: 1440px) {
+  .page-footer {
+    background: url('/img/footer/footer-glass-effect-desktop.png') no-repeat
+        right center,
+      #1c1d20;
+  }
+
+  .footer-container {
+    max-width: 1440px;
+    padding: 0 196px;
+  }
+
+  .footer-form-input {
+    width: 390px;
+  }
+
+  .footer-form-btn {
+    margin-left: 54px;
+  }
+}
+
+/* -------FOOTER-MODAL------ */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 15, 16, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.footer-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 343px;
+  height: 276px;
+  overflow: auto;
+  padding: 64px 32px;
+  background-color: #1c1d20;
+  border: 1px solid rgba(250, 250, 250, 0.1);
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop:not(.is-open) .footer-modal {
+  transform: translate(-50%, -100%);
+}
+
+.footer-modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.modal-close-icon {
+  stroke: #fafafa;
+}
+
+.footer-modal-close-btn:hover,
+.footer-modal-close-btn:focus {
+  background-color: transparent;
+}
+
+.footer-modal-title,
+.footer-error-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #fafafa;
+  margin-bottom: 16px;
+}
+
+.footer-modal-text,
+.footer-error-text {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: rgba(250, 250, 250, 0.6);
+}
+
+/* -----FOOTER-MODAL-TABLET----- */
+
+@media screen and (min-width: 768px) {
+  .footer-modal {
+    padding: 64px;
+    width: 492px;
+    height: 246px;
+  }
+}

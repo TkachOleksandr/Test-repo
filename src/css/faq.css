@@ -1,0 +1,131 @@
+.faq {
+  background-color: #1c1d20;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.faq-container {
+  width: 100%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.ul-faq {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.item-faq {
+  border-top: 1px solid #fafafa33;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  cursor: pointer;
+}
+
+.faq-title {
+  color: #fafafa66;
+  font-size: 16px;
+  letter-spacing: -2%;
+  padding: 10px 0;
+  padding-left: 40px;
+}
+
+.h4-faq {
+  color: #fafafa;
+  line-height: 30px;
+  font-size: 20px;
+  max-width: 80%;
+  margin: 0;
+}
+
+.btn-faq {
+  border-radius: 100px;
+  background-color: #1c1d20;
+  border: 1px solid #fafafa33;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.text-faq {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  color: #fafafa99;
+  margin-top: 10px;
+}
+
+.item-faq.active .btn-faq {
+  transform: rotate(180deg);
+}
+
+.item-faq.active .text-faq {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+  opacity: 1;
+  max-height: 300px;
+  max-width: 600px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 1439px) and (min-width: 768px) {
+  .h4-faq {
+    max-width: 70%;
+  }
+  .item-faq.active .text-faq {
+    max-width: 1200px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .item-faq {
+    width: calc((100% - 24px) / 2);
+    border-bottom: 1px solid #fafafa33;
+    padding-left: 20px;
+  }
+
+  .rightbord-faq {
+    border-right: 1px solid #fafafa33;
+  }
+  .ul-faq {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 0px;
+  }
+  .btn-faq {
+    margin-right: 40px;
+    margin-bottom: 10px;
+  }
+
+  .item-faq.active .text-faq {
+    max-width: 1150px;
+  }
+}
+
+/* computer */
+@media screen and (min-width: 2040px) {
+  .item-faq.active .text-faq {
+    max-width: 950px;
+  }
+}

@@ -1,0 +1,133 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* --------------Covers-Section--------------------------- */
+.covers-section {
+  max-width: 375px;
+  height: 508px;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url(/img/covers-img/bg-balls-mob.png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) and (min-resolution: 192dpi) {
+  .covers-section {
+    background-image: url(/img/covers-img/bg-balls-mob@2x.png);
+  }
+}
+
+.covers-list {
+  display: flex;
+  gap: 20px;
+}
+.covers-list:nth-child(2) {
+  transform: rotate(16deg) translateX(-100px) translateY(-250px);
+}
+.covers-list:nth-child(4) {
+  transform: rotate(16deg) translateX(-220px) translateY(-250px);
+}
+.covers-list:nth-child(1),
+.covers-list:nth-child(3),
+.covers-list:nth-child(5) {
+  transform: rotate(16deg) translateX(-350px) translateY(-250px);
+}
+
+.covers-list-item {
+  display: flex;
+  width: 282px;
+  height: 162px;
+  margin-bottom: 30px;
+  flex-shrink: 0;
+  animation-name: marqueeLine;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+.covers-img {
+  width: 100%;
+}
+/* ---------------Animation------------- */
+@keyframes marqueeLine {
+  from {
+    transform: translateX(-20%);
+  }
+
+  to {
+    transform: translateX(-180%);
+  }
+}
+/* ---------------------------------------- */
+@media screen and (min-width: 768px) {
+  .covers-section {
+    max-width: 768px;
+    height: 960px;
+    background-image: url(/img/covers-img/bg-balls-tablet.png);
+  }
+  @media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+    .covers-section {
+      background-image: url(/img/covers-img/bg-balls-tablet@2x.png);
+    }
+  }
+
+  .covers-list {
+    gap: 45px;
+  }
+  .covers-list:nth-child(2) {
+    transform: rotate(16deg) translateX(-200px) translateY(-450px);
+  }
+  .covers-list:nth-child(4) {
+    transform: rotate(16deg) translateX(-400px) translateY(-450px);
+  }
+  .covers-list:nth-child(1),
+  .covers-list:nth-child(3),
+  .covers-list:nth-child(5) {
+    transform: rotate(16deg) translateX(-550px) translateY(-450px);
+  }
+
+  .covers-list-item {
+    width: 544px;
+    height: 314px;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .covers-section {
+    max-width: 1439px;
+    background-image: url(/img/covers-img/bg-balls-desktop.png);
+  }
+  @media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
+    .covers-section {
+      max-width: 1439px;
+      background-image: url(/img/covers-img/bg-balls-desktop@2x.png);
+    }
+  }
+
+  .covers-list:nth-child(2) {
+    transform: rotate(16deg) translateX(120px) translateY(-490px);
+  }
+  .covers-list:nth-child(4) {
+    transform: rotate(16deg) translateX(-130px) translateY(-490px);
+  }
+  .covers-list:nth-child(1),
+  .covers-list:nth-child(3),
+  .covers-list:nth-child(5) {
+    transform: rotate(16deg) translateX(-340px) translateY(-490px);
+  }
+
+  .covers-list-item {
+    margin-bottom: 70px;
+  }
+}

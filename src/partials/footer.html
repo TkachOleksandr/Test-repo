@@ -1,0 +1,90 @@
+<footer class="page-footer" id="order">
+  <div class="footer-container">
+    <div class="footer-logo-box">
+      <a class="footer-logo" href="/portfolio-js-team-9/">
+        <picture>
+          <source
+            srcset="
+              /img/footer/footer-logo-large@1x.png 1x,
+              /img/footer/footer-logo-large@2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="
+              /img/footer/footer-logo-mobile@1x.png 1x,
+              /img/footer/footer-logo-mobile@2x.png 2x
+            "
+            media="(max-width: 767px)"
+          />
+          <img src="/img/footer/footer-logo-mobile@1x.png" alt="Logotype" />
+        </picture>
+      </a>
+      <h2 class="footer-title">
+        Let’s <span class="footer-color-span">work</span>
+        <span class="footer-left-span">together</span>
+      </h2>
+    </div>
+    <form class="footer-form">
+      <div class="input-wrapper">
+        <input
+          class="footer-form-input email"
+          type="email"
+          name="email"
+          placeholder="clients@gmail.com"
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+          autocomplete="off"
+          required
+        />
+        <span class="text-valid">Success!</span>
+        <span class="text-invalid">Invalid email, try again</span>
+      </div>
+      <div class="input-wrapper">
+        <input
+          class="footer-form-input comment"
+          type="text"
+          name="comments"
+          placeholder="comments"
+          autocomplete="off"
+          required
+          data-maxlength="24"
+        />
+      </div>
+      <button class="footer-form-btn" type="submit">Send</button>
+    </form>
+    <address class="footer-contacts">
+      <ul class="footer-contacts-list">
+        <li class="footer-contacts-item">
+          <a class="footer-contacts-link" href="mailto:lloydjefferson@gmail.com"
+            >lloydjefferson@gmail.com</a
+          >
+        </li>
+        <li class="footer-contacts-item">
+          <a class="footer-contacts-link" href="tel:+3801111111111"
+            >+380 11 1111 11 11</a
+          >
+        </li>
+      </ul>
+    </address>
+  </div>
+</footer>
+<script type="module" src="/js/footer.js"></script>
+
+<!-- Modal-window -->
+
+<div class="backdrop">
+  <div class="footer-modal">
+    <button class="footer-modal-close-btn" type="button">
+      <svg class="modal-close-icon" width="24" height="24">
+        <use href="/img/footer/footer-sprite.svg#icon-modal-close-icon"></use>
+      </svg>
+    </button>
+    <h3 class="footer-modal-title">
+      Thank you for your interest in cooperation!
+    </h3>
+    <p class="footer-modal-text">
+      The manager will contact you shortly to discuss further details and
+      opportunities for cooperation. Please stay in touch.
+    </p>
+  </div>
+</div>

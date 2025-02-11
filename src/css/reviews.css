@@ -1,0 +1,145 @@
+/* mobile first */
+.reviews-container {
+    width: 343px;
+    height: 442px;
+    margin-bottom: 64px;
+    margin: 64px auto;
+}
+
+  /* Стилі для заголовка секції */
+.reviews-section-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: rgba(250, 250, 250, 0.4);
+    text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    margin-bottom: 32px;
+    margin-top: 64px;
+    text-transform: uppercase;
+}
+
+/* Список відгуків*/
+
+.reviews-list-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+}
+
+.swiper-reviews {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.reviews-list {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.reviews-list-item {
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 20px;
+    padding: 32px 24px;
+    box-sizing: border-box;
+    flex-direction: column;
+    margin-bottom: 32px;
+    flex: 0 0 auto; /* Запобігає стисненню елементів */
+}
+
+.review-image {
+    margin-bottom: 32px;
+}
+
+.reviews-names {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+    margin-bottom: 8px;
+    font-family: "Inter Tight", sans-serif;
+    text-align: left;
+}
+
+.reviews-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: rgba(250, 250, 250, 0.6);
+    font-family: "Inter Tight", sans-serif;
+    text-align: left;
+}
+
+  /* arrows стилі */
+
+.reviews-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 32px;
+}
+
+.swiper-button-prev-reviews,
+.swiper-button-next-reviews {
+    background-color: rgba(250, 250, 250, 0.1);
+    color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    border: 1px solid rgba(250, 250, 250, 0.5);
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    box-sizing: border-box;
+}
+
+  /* це позиціонування свайперів */
+
+.swiper-button-prev-reviews {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateX(-35px);
+}
+
+.swiper-button-next-reviews {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateX(35px);
+}
+
+  /* видалення дефолтних свайперів з бібліотети swiper */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    display: none;
+}
+
+.swiper-button-disabled-reviews {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+@media screen and (min-width: 768px) {
+    .reviews-container {
+    margin-bottom: 96px;
+    width: 704px;
+    height: 458px;
+    margin: 96px auto;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .reviews-container {
+    margin-bottom: 164px;
+    width: 1376px;
+    height: 458px;
+    margin: 164px auto;
+    }
+}
